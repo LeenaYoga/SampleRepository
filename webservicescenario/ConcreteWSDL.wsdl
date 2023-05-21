@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Created by TIBCO WSDL-->
-<wsdl:definitions xmlns:tns="http://xmlns.example.com/1684175752117/OperationImpl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.tibco.com/schemas/webservicescenario/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1684175752117/OperationImpl">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1684175866968/OperationImpl" xmlns:ns0="http://www.tibco.com/schemas/webservicescenario/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1684175866968/OperationImpl">
     <wsdl:types>
-        <xs:schema xmlns="http://www.tibco.com/schemas/webservicescenario/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/webservicescenario/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.tibco.com/schemas/webservicescenario/Schema.xsd">
             <xs:element name="Designation" type="xs:string"/>
             <xs:element name="Id" type="xs:int"/>
             <xs:element name="Location" type="xs:string"/>
@@ -31,7 +31,7 @@
         </xs:schema>
     </wsdl:types>
     <wsdl:service name="PortTypeOperation">
-        <wsdl:port name="SOAPEventSource" binding="tns:SOAPEventSourceBinding">
+        <wsdl:port binding="tns:SOAPEventSourceBinding" name="SOAPEventSource">
             <soap:address location="http://localhost:1823/PortTypeOperation"/>
         </wsdl:port>
     </wsdl:service>
@@ -44,19 +44,19 @@
     <wsdl:binding name="SOAPEventSourceBinding" type="tns:PortType">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
         <wsdl:operation name="Operation">
-            <soap:operation style="document" soapAction="/PortTypeOperation"/>
+            <soap:operation soapAction="/PortTypeOperation" style="document"/>
             <wsdl:input>
-                <soap:body use="literal" parts="part1"/>
+                <soap:body parts="part1" use="literal"/>
             </wsdl:input>
             <wsdl:output>
-                <soap:body use="literal" parts="part1"/>
+                <soap:body parts="part1" use="literal"/>
             </wsdl:output>
         </wsdl:operation>
     </wsdl:binding>
     <wsdl:message name="ReqMessage">
-        <wsdl:part name="part1" element="ns0:PoliceReq"/>
+        <wsdl:part element="ns0:PoliceReq" name="part1"/>
     </wsdl:message>
     <wsdl:message name="ResMessage">
-        <wsdl:part name="part1" element="ns0:PoliceRes"/>
+        <wsdl:part element="ns0:PoliceRes" name="part1"/>
     </wsdl:message>
 </wsdl:definitions>
