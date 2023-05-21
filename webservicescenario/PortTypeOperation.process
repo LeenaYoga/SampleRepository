@@ -37,8 +37,8 @@
     <pd:starter name="SOAPEventSource">
         <pd:type>com.tibco.plugin.soap.SOAPEventSource</pd:type>
         <pd:resourceType>ae.activities.SOAPEventSourceUI</pd:resourceType>
-        <pd:x>98</pd:x>
-        <pd:y>76</pd:y>
+        <pd:x>99</pd:x>
+        <pd:y>75</pd:y>
         <config>
             <service>wsdlPfx:PortType</service>
             <wsdlNamespaceRoot>http://xmlns.example.com/1684175752117/OperationImpl</wsdlNamespaceRoot>
