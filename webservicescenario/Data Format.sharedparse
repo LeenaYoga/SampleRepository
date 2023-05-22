@@ -14,7 +14,7 @@
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="Name" type="xsd:string"/>
-                        <xsd:element name="Id" type="xsd:int"/>
+                        <xsd:element name="Id" type="xsd:string"/>
                         <xsd:element name="Fathername" type="xsd:string"/>
                         <xsd:element name="Designation" type="xsd:string"/>
                         <xsd:element name="Location" type="xsd:string"/>
